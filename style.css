@@ -203,6 +203,7 @@ body, html {
 
 @media only screen and (max-width: 576px) {
 
+    
     .left-banner{
         height: 30vh;
     }
