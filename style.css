@@ -202,5 +202,11 @@ body, html {
 
 
 @media only screen and (max-width: 576px) {
+    .right-banner{
+        height: auto;        
+    }
 
+    .left-banner{
+        height: auto;
+    }
 }
