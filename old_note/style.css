@@ -1,0 +1,209 @@
+:root {
+    --steps: 16;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    height: 100%;
+} 
+
+.scroll-container {
+    overflow-y: scroll; 
+    scroll-snap-type: y mandatory;
+}
+
+.page {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.nav-board{
+    background-color: #1818189a;
+    opacity: 70%;
+    width: 100%;
+    height: 6vh;
+    z-index: 1;
+    padding: 0 20px 0 20px;
+}
+
+.nav-board span{    
+    color: #FFFFFF;
+}
+
+.contact_icon{
+    width: 30px;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;    
+    font-family: "JetBrains Mono", monospace;
+    float: right;
+}
+
+.menu li {
+    font-size: 1rem;
+    float: left;
+    text-align: center;
+}
+
+.menu li a {
+    display: block; 
+    color: white; 
+    text-align: center; 
+    padding: 14px 16px; 
+    text-decoration: none; 
+}
+
+.menu li a:hover {
+    color: #F26419;
+    text-decoration: underline;
+}
+
+.menuMobile{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    float: right;
+    font-weight: 900;
+    color: white;
+}
+
+.navbar_ {
+    float: right;
+    display: none;
+}
+
+.name {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 5vw;
+    color: #F6AE2D;
+    position: relative;
+}
+
+.name::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    color: #F6AE2D;
+    background: #2F4858;
+    animation: typing 2s steps(var(--steps)) forwards,
+    caret 0.5s infinite;
+}  
+ 
+@keyframes typing {
+    to { width: 0 }
+}
+@keyframes caret {
+    50% { color: transparent }
+}
+
+.subname {
+    color: #FFF;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.2vw;
+    margin-top: 0;
+}
+
+.subname::before{
+    content: ""; 
+    display: inline-block;
+    width: 2vh; 
+    height: 0.2vw; 
+    background-color: #FFF;
+    vertical-align: middle;
+}
+
+.subname::after{
+    content: ""; 
+    display: inline-block;
+    width: 2vh; 
+    height: 0.2vw; 
+    background-color: #FFF;
+    vertical-align: middle;
+}
+
+.logo {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    color: #F26419;
+    z-index: 1;
+    position: relative;
+}
+
+.container{
+    width: 100%;
+    background-color:#2F4858;
+    color: white;
+}
+
+.photo{
+    height: 35vh;
+    opacity: 70%;    
+}
+
+.banner{
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    height: 68.5vh;   
+}
+
+.contact{
+    background-color: #F6AE2D;
+    height: 15vh;
+}
+
+.contact_logo{
+    height: 45px;
+}
+
+.download-cv{
+    background-color: #F26419; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1vw;
+    transition: background-color 0.3s;
+    width: 15vh;
+}
+
+.download-cv:hover {
+    background-color: #2F4858; 
+}
+
+.skils h4{
+    color:#F26419;
+    text-decoration: underline;
+}
+
+.pagina_1 {
+    background-color: #2F4858;
+}
+
+.pagina_2 {
+    background-color: #FFF;
+}
+
+.softskills{
+    background-color: #2F4858;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+}
+

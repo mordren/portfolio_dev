@@ -1,0 +1,51 @@
+
+@media only screen and (max-width: 576px) {
+    .nav-board {
+        height: 8vh;
+        width: 100%;
+        padding: 0 0 0 0;
+    }
+
+    .menu {
+        display: none;
+    }
+    
+    .name{
+        font-size: 1.5rem;
+    }
+
+    .subname{
+        font-size: 1rem;
+    }
+
+    .banner{
+        height: 25vh;
+    }
+
+    .photo{
+        height: 15vh;        
+    }
+
+    .contact{
+        align-items: center;
+        flex-direction: column;   
+        height: 40vh;     
+    }
+
+    .git{
+        margin-bottom: 5px;
+    }
+
+    .download-cv{
+        font-size: 1rem;
+    }
+    
+    .menuMobile {
+        display: block; 
+    }
+
+    .navbar a {
+        display: block; 
+        height: 2.5vh;        
+    }
+}
