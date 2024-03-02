@@ -24,6 +24,8 @@ body, html {
 .scroll-container {
     overflow-y: scroll; 
     scroll-snap-type: y mandatory;
+    padding: 0;
+    margin: 0;
 }
 
 .page {
@@ -39,6 +41,10 @@ body, html {
     height: 80vh;
 }
 
+.pagina_2 {
+    height: 100vh;
+    background-color: white;
+}
 
 .background_azul {
     background: rgb(51,101,138);
@@ -49,18 +55,7 @@ body, html {
     background-color: white;
 }
 
-.nav-board{
-    height: 6vh;
-}
 
-.container{
-    height: 60vh;
-}
-
-.footer{
-    height: 20vh;
-    width: 100%;
-}
 
 /* Atributes */
 h3 {
@@ -75,7 +70,20 @@ span{
     color: #FFF;
 }
 
-/* NAV BAR */ 
+/* PÁGINA 1 */ 
+.nav-board{
+    height: 6vh;
+}
+
+.container{
+    height: 60vh;
+}
+
+.footer{
+    height: 20vh;
+    width: 100%;
+}
+
 nav {
     display: flex;
 } 
@@ -131,7 +139,8 @@ nav {
     text-decoration: underline;
 }
 
-/* CONTAINER */
+
+/* PÁGINA 1 */
 .banner{
     height: 60vh;
     display: flex;
@@ -148,7 +157,6 @@ nav {
     box-shadow: 1px 1px 1px 1px #9b9a9a;
   }
 
-/* Nome Gradiente */
 .name {
     font-family: "JetBrains Mono";
     background: linear-gradient(45deg,  #F6AE2D ,#70afd6, #F26419, #55DDE0);
@@ -160,11 +168,13 @@ nav {
     text-align: center;
     line-height: 0.9;
 }
+
 .name span{
     font-weight: 600;
     display: block;
     font-size: 4rem;
 }
+
 @keyframes animate{
     0%{
         background-position: 0 50%;
@@ -203,7 +213,6 @@ nav {
     vertical-align: middle;
 }
 
-/* FOOTER */
 .footer{
     background-color: #F6AE2D;
 }
@@ -211,5 +220,27 @@ nav {
 .footer p {
     font-size: 12px;
     bottom: 0;
+}
+
+/* PÁGINA 2 */
+.soft_skills{
+    background-color: #F6AE2D;
+}
+
+.skill_boxes .box {
+    background-color: #2F4858;
+    text-align: center;
+    margin: 20px;
+}
+
+.skill_boxes .box h6{    
+    color:#FFF;
+}
+
+
+.skill_boxes .box p{
+    font-size: 14px;
+    justify-content: center;
+    color: white;
 }
 
