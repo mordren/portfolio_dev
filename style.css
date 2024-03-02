@@ -177,7 +177,6 @@ nav {
     }
 }
 
-
 .subname {
     color: #FFF;
     font-family: "JetBrains Mono", monospace;
@@ -207,5 +206,9 @@ nav {
 /* FOOTER */
 .footer{
     background-color: #F6AE2D;
+}
+
+.footer p {
+    font-size: 12px;
 }
 
