@@ -1,22 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 :root {
     --steps: 16;
+    --azul-fundo: #2F4858;
+    --bg-yellow: #F6AE2D;
 }
 
 /* 
 fundo: #2F4858
-amarelo: #F6AE2D
+amarelo: 
 laranja: #F26419
 */
 
 /* CONFIG PÁGINA */
 
+body.disable-scrolling, body.disable-scrolling html {
+    overflow: hidden;
+}
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; 
     background: rgb(51,101,138);
     background: linear-gradient(90deg, rgba(51,101,138,1) 0%, rgba(47,72,88,1) 100%);
 }
@@ -34,7 +40,6 @@ body, html {
     scroll-snap-align: start;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
 }
 
 .pagina_1 {
@@ -44,9 +49,10 @@ body, html {
 .pagina_2 {
     height: 100vh;
     background-color: white;
+    padding: 30px 30px 0px 30px;
 }
 
-.background_azul {
+.background_gradient {
     background: rgb(51,101,138);
     background: linear-gradient(90deg, rgba(51,101,138,1) 0%, rgba(47,72,88,1) 100%);
 }
@@ -55,19 +61,32 @@ body, html {
     background-color: white;
 }
 
-
+.bg_yellow{
+    background-color: var(--bg-yellow)
+}
 
 /* Atributes */
 h3 {
     color: #F26419;
+    font-family: "JetBrains Mono", monospace;
 }
 
 h4 {
-    color: #F26419;
+    color: #F26419 !important;
+    font-family: "JetBrains Mono", monospace;
+}
+
+h6{
+    font-family: "JetBrains Mono", monospace;
 }
 
 span{
     color: #FFF;
+    font-family: "JetBrains Mono", monospace;
+}
+
+p {
+    font-family: "JetBrains Mono";
 }
 
 /* PÁGINA 1 */ 
@@ -155,11 +174,11 @@ nav {
     object-fit: cover;
     width: 200px;  
     box-shadow: 1px 1px 1px 1px #9b9a9a;
-  }
+}
 
 .name {
     font-family: "JetBrains Mono";
-    background: linear-gradient(45deg,  #F6AE2D ,#70afd6, #F26419, #55DDE0);
+    background: linear-gradient(45deg, var(--bg-yellow) ,#70afd6, #F26419, #55DDE0);
     background-size: 300%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -213,34 +232,85 @@ nav {
     vertical-align: middle;
 }
 
-.footer{
-    background-color: #F6AE2D;
-}
-
 .footer p {
     font-size: 12px;
     bottom: 0;
 }
 
 /* PÁGINA 2 */
-.soft_skills{
-    background-color: #F6AE2D;
+.soft-skills{
+    height: 20vh;
+    margin-top: 10vh !important;
 }
 
-.skill_boxes .box {
-    background-color: #2F4858;
+.contact-hard-skills{
+    margin-top: 10vh !important;
+}
+
+.skill-boxes .box {
+    background-color: var(--azul-fundo);
     text-align: center;
     margin: 20px;
+    height: 15vh;
 }
 
-.skill_boxes .box h6{    
-    color:#FFF;
-}
-
-
-.skill_boxes .box p{
-    font-size: 14px;
+.skill-boxes .box p{
     justify-content: center;
     color: white;
+    font-weight: 300;
+    font-size: 0.8rem;
 }
 
+.hard-box-div {
+    padding: 20px;
+}
+
+
+
+.box h6{    
+    color:#FFF;    
+}
+
+
+.contact {
+    height: 25vh;
+}
+
+.contact .hard-box-div p {
+    color: red;
+}
+
+.contact .hard-box-div h6{
+    align-self: center;
+    color: var(--azul-fundo)
+}
+
+.hard-box{
+    float: right;
+    height: 33vh;
+}
+
+.hard-photo{
+    height: 70px;
+}
+
+.hard-photo:hover{
+    opacity: 65%;
+}
+
+.button_download{
+    background-color: #F26419;
+    color: #FFF;
+    border-radius: 6px;
+    border: none;
+    padding: 3px;    
+    width: 60%;
+}
+
+.button_download:hover{
+    background-color: #7c320a;
+}
+
+.email{
+    margin-top: 70px !important;
+}
