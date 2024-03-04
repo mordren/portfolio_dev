@@ -16,7 +16,9 @@ laranja: #F26419
 /* CONFIG PÁGINA */
 
 body.disable-scrolling, body.disable-scrolling html {
+    /* 
     overflow: hidden;
+    */
 }
 
 body, html {
@@ -28,22 +30,25 @@ body, html {
 }
 
 .scroll-container {
+    /*
     overflow-y: scroll; 
     scroll-snap-type: y mandatory;
+    */
     padding: 0;
     margin: 0;
 }
 
 .page {
-    height: 100vh;
     width: 100%;
-    scroll-snap-align: start;
     justify-content: center;
     align-items: center;
+    /* 
+    scroll-snap-align: start;
+    */
 }
 
 .page-1 {
-    height: 80vh;
+    height: 70vh;
 }
 
 .page-2 {
@@ -99,7 +104,7 @@ p {
 }
 
 .footer{
-    height: 20vh;
+    height: 30vh;
     width: 100%;
 }
 
@@ -239,8 +244,7 @@ nav {
 
 /* PÁGINA 2 */
 .soft-skills{
-    height: 20vh;
-    margin-top: 10vh !important;
+    height: 30vh;
 }
 
 .contact-hard-skills{
@@ -258,20 +262,18 @@ nav {
     justify-content: center;
     color: white;
     font-weight: 300;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .hard-box-div {
     padding: 20px;
 }
 
-
-
 .box h6{    
     color:#FFF;    
 }
 
-contact {
+.contact {
     height: 25vh;
 }
 
@@ -311,25 +313,25 @@ contact {
 }
 
 .email{
-    margin-top: 70px !important;
+
 }
 
 /* PÁGINA 3 */
 .label-portfolio-title{
     background-color: #F26419;
-    width: 70px !important;
+    width: max-content;
     color: #FFF;
-    height: 15px;
-    margin-top: 70px;
-}
+    height: 25px;
+ }
 
 .box-portfolio {
     background-color: #FFF;
     width: 340px !important;
     position: relative;
-    height: fit-content;
+    height: 250px;
     display: grid;
-    justify-content: center;   
+    justify-content: center;
+    text-align: center;   
 }
 
 .box-portfolio h4 {
@@ -338,5 +340,47 @@ contact {
 }
 
 .portfolio-photo{
-    width: 190px;  
+    width: 280px; 
+    height: 180px;
+    
+}
+
+.box-portfolio p {
+    visibility: hidden; /* Oculta o texto inicialmente */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear; /* Transição suave para o texto aparecer */
+    display: none;
+    justify-content: center;
+}
+
+.box-portfolio:hover p {
+    visibility: visible; /* Torna o texto visível no hover */
+    opacity: 1;
+    display: flex;
+    position: absolute;
+    top: 30%;
+    margin: 5px;
+    text-decoration: white;
+}
+
+.box-portfolio:hover img {
+    opacity: 30%;
+}
+
+.portfolio-box-icon {
+    visibility: hidden; /* Oculta o texto inicialmente */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear; /* Transição suave para o texto aparecer */
+    display: none;
+    justify-content: center;
+}
+
+.box-portfolio:hover ~ .portfolio-box-icon {
+    visibility: visible; /* Torna o texto visível no hover */
+    opacity: 1;
+    display: flex;
+    position: absolute;
+    top: 30%;
+    margin: 5px;
+    text-decoration: white;
 }
