@@ -1,17 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 :root {
     --steps: 16;
+    --azul-fundo: #2F4858;
+    --bg-yellow: #F6AE2D;
+}
+
+/* 
+fundo: #2F4858
+amarelo: 
+laranja: #F26419
+*/
+
+/* CONFIG PÁGINA */
+
+body.disable-scrolling, body.disable-scrolling html {
+    overflow: hidden;
 }
 
 body, html {
     margin: 0;
     padding: 0;
-    overflow: hidden; 
     height: 100%;
-} 
+    background: rgb(51,101,138);
+    background: linear-gradient(90deg, rgba(51,101,138,1) 0%, rgba(47,72,88,1) 100%);
+}
 
 .scroll-container {
     overflow-y: scroll; 
     scroll-snap-type: y mandatory;
+    padding: 0;
+    margin: 0;
 }
 
 .page {
@@ -20,24 +40,94 @@ body, html {
     scroll-snap-align: start;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
 }
+
+.page-1 {
+    height: 80vh;
+}
+
+.page-2 {
+    height: 100vh;
+    background-color: white;
+    padding: 30px 30px 0px 30px;
+}
+
+.background_gradient {
+    background: rgb(51,101,138);
+    background: linear-gradient(90deg, rgba(51,101,138,1) 0%, rgba(47,72,88,1) 100%);
+}
+
+.background_white {
+    background-color: white;
+}
+
+.bg_yellow{
+    background-color: var(--bg-yellow)
+}
+
+/* Atributes */
+h3 {
+    color: #F26419;
+    font-family: "JetBrains Mono", monospace;
+}
+
+h4 {
+    color: #F26419 !important;
+    font-family: "JetBrains Mono", monospace;
+}
+
+h6{
+    font-family: "JetBrains Mono", monospace;
+}
+
+span{
+    color: #FFF;
+    font-family: "JetBrains Mono", monospace;
+}
+
+p {
+    font-family: "JetBrains Mono";
+}
+
+/* PÁGINA 1 */ 
+.nav-board{
+    height: 6vh;
+}
+
+.container{
+    height: 60vh;
+}
+
+.footer{
+    height: 20vh;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+} 
 
 .nav-board{
-    background-color: #1818189a;
-    opacity: 70%;
-    width: 100%;
     height: 6vh;
-    z-index: 1;
-    padding: 0 20px 0 20px;
-}
-
-.nav-board span{    
-    color: #FFFFFF;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+    opacity: 70%;
+    top: 0;
+    border: 0px;
+    background-color: #2F4858;
 }
 
 .contact_icon{
     width: 30px;
+}
+
+.logo {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    color: #F26419;
 }
 
 .menu {
@@ -68,43 +158,52 @@ body, html {
     text-decoration: underline;
 }
 
-.menuMobile{
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    float: right;
-    font-weight: 900;
-    color: white;
+
+/* PÁGINA 1 */
+.banner{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    text-align: center;    
 }
 
-.navbar_ {
-    float: right;
-    display: none;
+.circle img {
+    background-color: #2F4858;
+    border-radius: 50%;
+    height: 200px;
+    object-fit: cover;
+    width: 200px;  
+    box-shadow: 1px 1px 1px 1px #9b9a9a;
 }
 
 .name {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 5vw;
-    color: #F6AE2D;
-    position: relative;
+    font-family: "JetBrains Mono";
+    background: linear-gradient(45deg, var(--bg-yellow) ,#70afd6, #F26419, #55DDE0);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 5s ease-in-out infinite;
+    text-align: center;
+    line-height: 0.9;
 }
 
-.name::after {
-    content: "|";
-    position: absolute;
-    right: 0;
-    width: 100%;
-    color: #F6AE2D;
-    background: #2F4858;
-    animation: typing 2s steps(var(--steps)) forwards,
-    caret 0.5s infinite;
-}  
- 
-@keyframes typing {
-    to { width: 0 }
+.name span{
+    font-weight: 600;
+    display: block;
+    font-size: 4rem;
 }
-@keyframes caret {
-    50% { color: transparent }
+
+@keyframes animate{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
 }
 
 .subname {
@@ -112,6 +211,7 @@ body, html {
     font-family: "JetBrains Mono", monospace;
     font-size: 1.2vw;
     margin-top: 0;
+    text-shadow: 2px 2px 4px #202020
 }
 
 .subname::before{
@@ -132,78 +232,115 @@ body, html {
     vertical-align: middle;
 }
 
-.logo {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 2rem;
-    font-weight: 900;
-    letter-spacing: 0.2rem;
-    color: #F26419;
-    z-index: 1;
-    position: relative;
+.footer p {
+    font-size: 12px;
+    bottom: 0;
 }
 
-.container{
-    width: 100%;
-    background-color:#2F4858;
-    color: white;
+/* PÁGINA 2 */
+.soft-skills{
+    height: 20vh;
+    margin-top: 10vh !important;
 }
 
-.photo{
-    height: 35vh;
-    opacity: 70%;    
+.contact-hard-skills{
+    margin-top: 10vh !important;
 }
 
-.banner{
-    display: flex;
-    vertical-align: center;
-    align-items: center;
-    height: 68.5vh;   
-}
-
-.contact{
-    background-color: #F6AE2D;
+.skill-boxes .box {
+    background-color: var(--azul-fundo);
+    text-align: center;
+    margin: 20px;
     height: 15vh;
 }
 
-.contact_logo{
-    height: 45px;
-}
-
-.download-cv{
-    background-color: #F26419; 
+.skill-boxes .box p{
+    justify-content: center;
     color: white;
-    padding: 10px 20px;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+.hard-box-div {
+    padding: 20px;
+}
+
+
+
+.box h6{    
+    color:#FFF;    
+}
+
+contact {
+    height: 25vh;
+}
+
+.contact .hard-box-div p {
+    color: red;
+}
+
+.contact .hard-box-div h6{
+    align-self: center;
+    color: var(--azul-fundo)
+}
+
+.hard-box{
+    float: right;
+    height: 33vh;
+}
+
+.hard-photo{
+    height: 70px;
+}
+
+.hard-photo:hover{
+    opacity: 65%;
+}
+
+.button_download{
+    background-color: #F26419;
+    color: #FFF;
+    border-radius: 6px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1vw;
-    transition: background-color 0.3s;
-    width: 15vh;
+    padding: 3px;    
+    width: 60%;
 }
 
-.download-cv:hover {
-    background-color: #2F4858; 
+.button_download:hover{
+    background-color: #7c320a;
 }
 
-.skils h4{
-    color:#F26419;
-    text-decoration: underline;
+.email{
+    margin-top: 70px !important;
 }
 
-.pagina_1 {
-    background-color: #2F4858;
+/* PÁGINA 3 */
+.portfolio{
+
 }
 
-.pagina_2 {
+.label-portfolio-title{
+    background-color: #F26419;
+    width: 70px !important;
+    color: #FFF;
+    height: 25px;
+    margin-top: 30px;
+}
+
+.box-portfolio {
     background-color: #FFF;
+    width: 340px !important;
+    position: relative;
+    height: fit-content;
+    display: grid;
+    justify-content: center;   
 }
 
-.softskills{
-    background-color: #2F4858;
+.box-portfolio h4 {
+    font-weight: bold;
+    text-align: center;
 }
 
-.contact{
-    display: flex;
-    align-items: center;
+.portfolio-photo{
+    width: 190px;  
 }
-

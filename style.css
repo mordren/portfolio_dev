@@ -42,11 +42,11 @@ body, html {
     align-items: center;
 }
 
-.pagina_1 {
+.page-1 {
     height: 80vh;
 }
 
-.pagina_2 {
+.page-2 {
     height: 100vh;
     background-color: white;
     padding: 30px 30px 0px 30px;
@@ -271,8 +271,7 @@ nav {
     color:#FFF;    
 }
 
-
-.contact {
+contact {
     height: 25vh;
 }
 
@@ -313,4 +312,31 @@ nav {
 
 .email{
     margin-top: 70px !important;
+}
+
+/* PÁGINA 3 */
+.label-portfolio-title{
+    background-color: #F26419;
+    width: 70px !important;
+    color: #FFF;
+    height: 15px;
+    margin-top: 70px;
+}
+
+.box-portfolio {
+    background-color: #FFF;
+    width: 340px !important;
+    position: relative;
+    height: fit-content;
+    display: grid;
+    justify-content: center;   
+}
+
+.box-portfolio h4 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.portfolio-photo{
+    width: 190px;  
 }
